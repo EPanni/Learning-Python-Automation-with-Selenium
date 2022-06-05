@@ -1,0 +1,11 @@
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get('https://robotic.copado.com/signup')
+full_name_field= driver.find_element_by_xpath('//*[@id="fullName"]')
+full_name_field.send_keys('Randomly chosen name - Test ')
+email_field= driver.find_element_by_xpath('//*[@id="email"]')
+email_field.send_keys('email@email.com')
+password_field= driver.find_element_by_xpath('//*[@id="password1"]')
+password_field.send_keys('password')
+create_account_buttom = driver.find_element_by_xpath('//*[@id="signUpForm"]/div[5]/button')
+create_account_buttom.click()
